@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/vitrinFragment">
+
+    <fragment
+        android:id="@+id/vitrinFragment"
+        android:name="morezrez.moviefy.ui.VitrinFragment"
+        android:label="fragment_vitrin"
+        tools:layout="@layout/fragment_vitrin" >
+        <action
+            android:id="@+id/action_vitrinFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="morezrez.moviefy.ui.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="movie_background_banner"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="movie_title"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="movie_description"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="movie_id"
+            app:argType="integer" />
+        <argument
+            android:name="movie_poster"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="movie_language"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="movie_rage"
+            app:argType="boolean" />
+        <argument
+            android:name="movie_imdb"
+            app:argType="float" />
+        <argument
+            android:name="movie_vote_count"
+            app:argType="integer" />
+        <argument
+            android:name="movie_release_date"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_self"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="morezrez.moviefy.ui.PlayerFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player" />
+</navigation>
