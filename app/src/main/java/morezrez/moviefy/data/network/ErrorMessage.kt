@@ -26,7 +26,6 @@ fun fromNetworkThrowable(throwable: Throwable?): ErrorResponse {
         ErrorResponse( DISCONNECT_MESSAGE)
     }
 }
-
 fun parseErrorBody(error: String): ErrorResponse {
     return try {
         gson.fromJson(error, ErrorResponse::class.java)

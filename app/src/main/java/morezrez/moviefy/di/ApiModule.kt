@@ -57,6 +57,4 @@ object ApiModule {
             .protocols(mutableListOf(Protocol.HTTP_1_1))
             .build()
     }
-
-
 }

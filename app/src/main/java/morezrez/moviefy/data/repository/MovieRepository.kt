@@ -38,7 +38,6 @@ class MovieRepository @Inject constructor(private val movieRemoteDataSource: Mov
         return result
 
     }
-
     suspend fun getMovieDetailSimilar(id :Int) : ArrayList<MovieModel>?{
         return getMovies(movieRemoteDataSource.getMovieDetailSimilar(id))
     }

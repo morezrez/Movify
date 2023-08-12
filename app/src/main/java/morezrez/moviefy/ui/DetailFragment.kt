@@ -37,13 +37,11 @@ class DetailFragment : Fragment(),AdapterCommiunicatorInterface {
         return binding.root
 
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         args = getArgs()
 
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -55,11 +53,6 @@ class DetailFragment : Fragment(),AdapterCommiunicatorInterface {
             val action = DetailFragmentDirections.actionDetailFragmentToPlayerFragment()
             findNavController().navigate(action)
         }
-
-    }
-
-    companion object {
-
     }
 
     private fun getArgs(): DetailFragmentArgs? {
@@ -74,8 +67,6 @@ class DetailFragment : Fragment(),AdapterCommiunicatorInterface {
         fragmentDetailViewModel.movieDetail.observe(viewLifecycleOwner){
             setUpMovieDetail(it)
         }
-
-
     }
 
     private fun setCollapsToolbarTitle(title: String) {
@@ -95,7 +86,6 @@ class DetailFragment : Fragment(),AdapterCommiunicatorInterface {
             }
         })
     }
-
 
     private fun setUpMovieDetail(detail : MovieDetailResponse){
         var rage = "every one"
@@ -163,6 +153,4 @@ class DetailFragment : Fragment(),AdapterCommiunicatorInterface {
         )
         findNavController().navigate(action)
     }
-
-
 }

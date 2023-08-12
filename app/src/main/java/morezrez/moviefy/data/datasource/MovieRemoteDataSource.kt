@@ -17,5 +17,4 @@ class MovieRemoteDataSource @Inject constructor(private val apiService: ApiServi
     override suspend fun getNowPlayingMovies() = safeApiCall { apiService.getNowPlayingMovies() }
     override suspend fun getMovieDetail(id: Int) = safeApiCall { apiService.getMovieDetail(id) }
     override suspend fun getMovieDetailSimilar(id: Int)= safeApiCall{ apiService.getMovieDetailSimilar(id) }
-
 }

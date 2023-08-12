@@ -3,7 +3,6 @@ package morezrez.moviefy.data.network
 import android.util.Log
 import kotlin.concurrent.thread
 
-
 suspend inline fun <T : Any> safeApiCall(
     crossinline call: suspend () -> T
 ): Resource<T> = runCatching {
